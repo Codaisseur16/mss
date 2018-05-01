@@ -23,7 +23,6 @@ services:
       - "4000:4000"
     depends_on:
       - users
-      - postgres
 
   quizzes:
     build: ./quizzes
