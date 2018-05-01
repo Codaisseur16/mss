@@ -25,7 +25,7 @@ for pair in "${REPOS[@]}"; do
   yarn install
 
   echo "...compiling TypeScript"
-  yarn run tsc -p .
+  tsc -p .
 
   echo "...injecting Dockefile"
   cp ../Dockerfile.apis Dockerfile
