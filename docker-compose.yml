@@ -11,7 +11,7 @@ services:
     command:
       - '/bin/bash'
       - '-c'
-      - 'yarn run dev'
+      - 'yarn && yarn run dev'
     environment:
       - NODE_ENV=development
       - PORT=4000
@@ -23,6 +23,7 @@ services:
       - "4000:4000"
     depends_on:
       - users
+      - postgres
 
   quizzes:
     build: ./quizzes
@@ -35,7 +36,7 @@ services:
     command:
       - '/bin/bash'
       - '-c'
-      - 'yarn run dev'
+      - 'yarn && yarn run dev'
     environment:
       - NODE_ENV=development
       - PORT=4001
@@ -57,7 +58,7 @@ services:
     command:
       - '/bin/bash'
       - '-c'
-      - 'yarn run dev'
+      - 'yarn && yarn run dev'
     environment:
       - NODE_ENV=development
       - PORT=4002
@@ -80,7 +81,7 @@ services:
     command:
       - '/bin/bash'
       - '-c'
-      - 'yarn run dev'
+      - 'yarn && yarn run dev'
     environment:
       - NODE_ENV=development
       - PORT=4003
@@ -101,7 +102,7 @@ services:
     command:
       - '/bin/bash'
       - '-c'
-      - 'yarn run dev'
+      - 'yarn && yarn run dev'
     environment:
       - NODE_ENV=development
       - PORT=4004
